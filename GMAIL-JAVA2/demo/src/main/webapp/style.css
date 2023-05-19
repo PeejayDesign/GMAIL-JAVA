@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary-color: #f0c4ff;
+  --hover-color: #cd92e1;
+  --text-color: #0c0d0d;
+  --dark-mode-bg-color: #0c0d0d;
+  --dark-mode-text-color: #ffffff;
+  --navbar-bg-color: transparent;
+  --container-bg-color: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--container-bg-color);
+  height: 100vh;
+  color: rgb(0, 0, 0);
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.navbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding: 5rem 8rem;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--navbar-bg-color);
+  transition: background-color 0.3s ease;
+}
+
+.navbar img {
+  width: 11rem;
+}
+
+.container {
+  padding: 0px 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+.heroText h1 {
+  font-weight: 400;
+  font-size: 90px;
+  word-wrap: break-word;
+}
+
+.heroText p {
+  color: #000000c4;
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+
+.gmailLink {
+  margin-top: 20px;
+  display: flex;
+}
+
+.gmailLink a {
+  border: 2.5px solid black;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: var(--text-color);
+  transition: all 0.6s ease;
+}
+
+.gmailLink a:hover {
+  border-width: 1.5px;
+  background-color: var(--hover-color);
+}
+
+.gmailLink a:hover,
+.gmailLink a:focus,
+.gmailLink a:active {
+  outline: none;
+  transform: scale(1.1);
+}
+
+.heroImage img {
+  width: 100%;
+  max-width: 53rem;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: var(--dark-mode-bg-color);
+  color: var(--dark-mode-text-color);
+}
+
+.dark-mode .heroText p {
+  color: #9393939e;
+}
+
+/* Toggle Button Styles */
+.toggle-btn {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.toggle-btn input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-label:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.toggle-btn input:checked + .toggle-label {
+  background-color: #67ff89;
+}
+
+.toggle-btn input:checked + .toggle-label:before {
+  transform: translateX(20px);
+}
+
+/* Media Query */
+@media (max-width: 1480px) {
+  .container {
+    padding: 0px 2rem;
+  }
+}
+
+@media (max-width: 1390px) {
+  .navbar {
+    padding: 5rem 4rem;
+  }
+  .container {
+    padding: 5rem 2rem;
+    padding-bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .heroText h1 {
+    text-align: center;
+    font-size: 60px;
+  }
+
+  .heroText p {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .gmailLink {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .heroImage img {
+    width: 100%;
+    max-width: 43rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .heroText h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .navbar {
+    padding: 3rem 2rem;
+  }
+  .navbar img {
+    width: 6rem;
+  }
+}
