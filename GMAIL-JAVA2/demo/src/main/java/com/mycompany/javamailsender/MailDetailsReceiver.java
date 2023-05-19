@@ -57,7 +57,7 @@ public class MailDetailsReceiver extends HttpServlet {
 
                 // Send message
                 Transport.send(message);
-                out.close();
+                // out.close();
                 RequestDispatcher rd = request.getRequestDispatcher("sucess.jsp");
                 rd.include(request, response);
                 out.close();

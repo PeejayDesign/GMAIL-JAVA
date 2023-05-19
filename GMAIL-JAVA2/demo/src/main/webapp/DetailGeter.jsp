@@ -75,7 +75,7 @@
           id="Messge"
           required
           placeholder="Message"
-          rows="10"
+          rows="5"
           cols="50"
           style="resize: none"
         ></textarea>
