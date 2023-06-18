@@ -9,7 +9,7 @@
 </head>
 <body>
      <div class="container">
-        <p>Welcome To Gmail</p>
+        <p>Welcome To Gmail web</p>
         <div class="gmail-link">
             <a href="DetailGeter.jsp">Send Mail</a>
         </div>
