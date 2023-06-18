@@ -26,8 +26,8 @@ public class MailDetailsReceiver extends HttpServlet {
             String to;
             String sub;
             String msg;
-            final String Password = "epijovsaltcthsht";
-            final String from = "techdemo899@gmail.com";
+            final String Password = "your password";
+            final String from = "your email";
             to = request.getParameter("to");
             sub = request.getParameter("sub");
             msg = request.getParameter("msg");
